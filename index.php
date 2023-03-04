@@ -16,9 +16,10 @@ if (!$conn){
     die("Sorry we failed to connect: ". mysqli_connect_error());
 }
 
-if(isset($_GET['delete'])){
-   $sno = $_GET['delete'];
-  
+if(isset($_GET['d'])){
+   $sno = $_GET['d'];
+//    $y = $_GET['x'];
+//    echo $y;
     $delete = true;
     $sql = "DELETE FROM `record` WHERE `sno` = $sno";
     $result = mysqli_query($conn, $sql);
@@ -180,6 +181,7 @@ else {
   }
   ?>
 
+<!-- check record deleted or not --> 
 
 <?php
   if($delete){
@@ -305,7 +307,7 @@ deletes = document.getElementsByClassName('delete');
 
         if (confirm("Are you sure you want to delete this note!")) {
           console.log("yes");
-          window.location = `index.php?delete=${sno}`;
+          window.location = `index.php?d=${sno}&x=5`;
           // TODO: Create a form and use post request to submit a form
         }
         else {
