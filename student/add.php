@@ -6,7 +6,7 @@
 <body>
 <?php
 //including the database connection file
-include_once("config.php");
+include_once("../config.php");
 
 if(isset($_POST['Submit'])) {	
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
