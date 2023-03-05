@@ -37,7 +37,7 @@
                 <a class="nav-link" href="student">Student</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
+                <a class="nav-link" href="teacher">Teacher</a>
               </li>
               </ul>
             <form class="d-flex" role="search">

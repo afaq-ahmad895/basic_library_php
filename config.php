@@ -14,7 +14,7 @@ $conn = mysql_connect("localhost","root","root")
  */
 
 $databaseHost = 'localhost';
-$databaseName = 'test';
+$databaseName = 'student_mangemnet_system';
 $databaseUsername = 'root';
 $databasePassword = 'root';
 
