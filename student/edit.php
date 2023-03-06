@@ -1,5 +1,5 @@
 <?php
-// including the database connection file
+// including the database connection file      
 include_once("../config.php");
 
 if(isset($_POST['update']))

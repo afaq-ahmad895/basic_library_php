@@ -19,3 +19,11 @@ CREATE TABLE `teachers` (
 );
 
 
+CREATE TABLE `class` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(100) NOT NULL,
+  `teacher_id` int(3) NOT NULL,
+ 
+  PRIMARY KEY  (`id`)
+);
+
