@@ -22,6 +22,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM teachers ORDER BY id DESC"); // u
 	<table width='80%' border=0>
 
 	<tr bgcolor='#CCCCCC'>
+	   <td>ID</td>
 		<td>Name</td>
 		<td>Age</td>
 		<td>Email</td>
@@ -31,6 +32,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM teachers ORDER BY id DESC"); // u
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<tr>";
+		echo "<td>".$res['id']."</td>";
 		echo "<td>".$res['name']."</td>";
 		echo "<td>".$res['age']."</td>";
 		echo "<td>".$res['email']."</td>";	

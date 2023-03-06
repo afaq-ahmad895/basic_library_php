@@ -3,8 +3,10 @@
 	<title>Add Data</title>
 </head>
 
+<?php include_once("../config.php"); ?>
+
 <body>
-	<a href="index.php">Home</a>
+	<a href="../index.php">Home</a>
 	<br/><br/>
 
 	<form action="add.php" method="post" name="form1">
@@ -13,14 +15,16 @@
 				<td>Name</td>
 				<td><input type="text" name="name"></td>
 			</tr>
-			<tr> 
+			<!-- <tr> 
 				<td>Teacher_id</td>
 				<td><input type="text" name="teacher_id"></td>
-			</tr>
+			</tr> -->
 			 <!-- <tr> 
 				<td>Section Name</td>
 				<td><input type="text" name="section_name"></td>
 			</tr>  -->
+
+			<h1> <?php echo "Hye from PHP" ?> </h1>
 
 			 <tr> 
 				<td>Choose a section:</td>
@@ -31,7 +35,31 @@
 						<option value="B">sectionB</option>
 						<option value="C">sectionC</option>
 						<option value="D">sectionD</option>
-					</select>
+					</select>				
+				</td>
+			</tr> 
+
+			<tr> 
+				<td>Choose a Teacher:</td>
+				<td>
+					<!-- <select name="section_name" id="section_name"> -->
+					<select name="teacher" id="teacher">
+						<label for="teacher">Teacher:</label>
+						<?php
+						// Fetch the data from the Teacher table
+						$sql = "SELECT * FROM teachers";
+
+						$result = mysqli_query($mysqli, $sql);
+						
+						//print_r($result);
+						
+						// Loop through the data and create options for the dropdown
+						while ($row = mysqli_fetch_assoc($result)) {
+							echo "<option value='".$row['id']."'>".$row['name']."</option>";
+						}
+						?>
+
+					</select>				
 				</td>
 			</tr> 
 

@@ -16,7 +16,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM classes ORDER BY id DESC"); // us
 <br/>
 <a href='../index.php'>HOME Page</a>
 </br>
-<a href="add.html">Add New class Record</a><br/>
+<a href="add2.php">Add New class Record</a><br/>
 <br/>
 
 	<table width='80%' border=0>
