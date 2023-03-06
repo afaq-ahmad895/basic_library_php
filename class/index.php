@@ -4,7 +4,7 @@ include_once("../config.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$result = mysqli_query($mysqli, "SELECT * FROM class ORDER BY id DESC"); // using mysqli_query instead
+$result = mysqli_query($mysqli, "SELECT * FROM classes ORDER BY id DESC"); // using mysqli_query instead
 ?>
 
 <html>
@@ -16,24 +16,26 @@ $result = mysqli_query($mysqli, "SELECT * FROM class ORDER BY id DESC"); // usin
 <br/>
 <a href='../index.php'>HOME Page</a>
 </br>
-<a href="add.html">Add New Teacher Record</a><br/>
+<a href="add.html">Add New class Record</a><br/>
 <br/>
 
 	<table width='80%' border=0>
 
 	<tr bgcolor='#CCCCCC'>
+	    <td>ID</td>
 		<td>Name</td>
-		<td>Age</td>
-		<td>Email</td>
+		<td>Teacher_id</td>
+		 <td>Section Name</td> 
 		<td>Update</td>
 	</tr>
 	<?php 
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<tr>";
+		echo "<td>".$res['id']."</td>";
 		echo "<td>".$res['name']."</td>";
-		echo "<td>".$res['age']."</td>";
-		echo "<td>".$res['email']."</td>";	
+		echo "<td>".$res['teacher_id']."</td>";
+		echo "<td>".$res['section_name']."</td>";	
 		echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
 	}
 	?>

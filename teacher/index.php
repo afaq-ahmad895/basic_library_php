@@ -16,7 +16,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM teachers ORDER BY id DESC"); // u
 <br/>
 <a href='../index.php'>HOME Page</a>
 </br>
-<a href="add.html">Add New Teacher Record</a><br/>
+<a href="add.html">Add New teacher Record</a><br/>
 <br/>
 
 	<table width='80%' border=0>
